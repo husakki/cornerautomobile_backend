@@ -42,9 +42,10 @@ app = FastAPI()
 def get_cars():
     return tmpdict
 
+
 # get car
 @app.get("/car/{car_id}")
 def get_car(car_id: int):
     return tmpdict[car_id]
 
-# set car of the month
+# update car of the month
