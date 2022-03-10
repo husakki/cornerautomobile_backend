@@ -5,7 +5,7 @@ CREATE TABLE CARS (
     model VARCHAR(50),
     kilometer INTEGER,
     consumption INTEGER,
-    cofm BOOLEAN,
+    cofm BOOLEAN, # car of the month
     
     constraint pk_car primary key(carid)
 );
