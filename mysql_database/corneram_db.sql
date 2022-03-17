@@ -1,19 +1,25 @@
 # The Table
 CREATE TABLE CARS (
-	carid integer,
-    brand VARCHAR(30),
-    model VARCHAR(50),
-    kilometer INTEGER,
-    consumption INTEGER,
+	carid INT NOT NULL,
+    brand VARCHAR(30) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    kilometer INT UNSIGNED NOT NULL,
+    consumption DOUBLE,
     cofm BOOLEAN, # car of the month
+    details VARCHAR(3000),
+    gearbox ENUM('Automatik', 'Schaltgetriebe'),
+    price DOUBLE NOT NULL,
+    manufacturing_year YEAR,
+    fuel ENUM('Diesel','Benzin','Autogas (LPG)', 'Elektro'),
+    power INT,
     
     constraint pk_car primary key(carid)
 );
 
 # Sample inserts
-INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm) values(1,"mercedes","a-klasse",10000,10,false);
-INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm) values(2,"mercedes","a-klasse",10000,10,false);
-INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm) values(3,"bmw","5er",1000,15,true);
-INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm) values(4,"audi","a3rs",20000,13,false);
-INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm) values(5,"ford","kuga",100000,10,true);
+INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm,details,gearbox,price,manufacturing_year,fuel,power) values(1,"mercedes1","a-klasse",10000,10,false, '', 'Automatik',20000.21,2012,'Benzin',200);
+INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm,details,gearbox,price,manufacturing_year,fuel,power) values(2,"mercedes2","a-klasse",10000,10,false, '', 'Automatik',20000.21,2012,'Benzin',200);
+INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm,details,gearbox,price,manufacturing_year,fuel,power) values(3,"mercedes3","a-klasse",10000,10,false, '', 'Automatik',20000.21,2012,'Benzin',200);
+INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm,details,gearbox,price,manufacturing_year,fuel,power) values(4,"mercedes4","a-klasse",10000,10,false, '', 'Automatik',20000.21,2012,'Benzin',200);
+INSERT INTO CARS(carid,brand, model, kilometer,consumption,cofm,details,gearbox,price,manufacturing_year,fuel,power) values(5,"mercedes5","a-klasse",10000,10,false, '', 'Automatik',20000.21,2012,'Benzin',200);
 
