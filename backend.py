@@ -6,6 +6,7 @@ app = FastAPI()
 db = mysql.connector.connect(
         user='root',
         host='127.0.0.1',
+        # port=3306,
         database='hus')
 
 mycursor = db.cursor()
