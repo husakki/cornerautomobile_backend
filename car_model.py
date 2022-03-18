@@ -27,7 +27,7 @@ class Car(BaseModel):
     details: Optional[str]
     gearbox: Optional[GearBox]
     price: float
-    manufacturing_year: Optional[datetime]
+    manufacturing_year: Optional[int]
     fuel: Optional[Fuel]
     power: Optional[int]
 
