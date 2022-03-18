@@ -21,6 +21,7 @@ mycursor = db.cursor()
 # get cars
 @app.get("/cars")
 def get_cars():
+
     mycursor.execute("SELECT * FROM cars;")
     return mycursor.fetchall()
 
@@ -28,7 +29,7 @@ def get_cars():
 # get car
 @app.get("/car/{car_id}")
 def get_car(car_id: int):
-    mycursor.execute("SELECT * FROM cars;")
+    mycursor.execute("SELECT * FROM cars where carid = {car_id};")
     tmpresult = mycursor.fetchall()
     return tmpresult[car_id]
 

@@ -32,4 +32,5 @@ class Car(BaseModel):
     power: Optional[int]
 
     class Config:
-        use_enum_values = True  # <--
+        use_enum_values = True
+        orm_mode = True
