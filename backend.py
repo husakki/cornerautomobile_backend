@@ -9,7 +9,7 @@ db = mysql.connector.connect(
         # port=3306,
         database='hus')
 
-mycursor = db.cursor()
+mycursor = db.cursor(dictionary=True)
 
 
 # add car
